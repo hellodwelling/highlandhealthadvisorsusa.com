@@ -312,14 +312,14 @@
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                 <!-- Render each sublink -->
-                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our team provides tailored and licensed health insurance advice and support to individuals and families. &#x27;, &#x27;copy&#x27;: &#x27;Health Insurance Consultation&#x27;, &#x27;href&#x27;: &#x27;service-Health-Insurance-Consultation&#x27;}, {&#x27;title&#x27;: &#x27;Our team of professionals will work with you to help you get the most accurate and reliable information possible. We will help you to identify the right coverage for you.&#x27;, &#x27;copy&#x27;: &#x27;Market Research&#x27;, &#x27;href&#x27;: &#x27;service-Market-Research&#x27;}]"> -->
+                                                <!-- <each loop="link in [{&#x27;title&#x27;: &#x27;Our team provides tailored and licensed health insurance advice and support to individuals and families.&#x27;, &#x27;copy&#x27;: &#x27;Health Insurance Consultation&#x27;, &#x27;href&#x27;: &#x27;service-Health-Insurance-Consultation&#x27;}, {&#x27;title&#x27;: &#x27;Our team of professionals will work with you to help you get the most accurate and reliable information possible. We will help you to identify the right coverage for you.&#x27;, &#x27;copy&#x27;: &#x27;Market Research&#x27;, &#x27;href&#x27;: &#x27;service-Market-Research&#x27;}]"> -->
                                                   
                                                     <a
                                                         href=" service-Health-Insurance-Consultation "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <!-- <p class="text-base font-medium text-gray-900">Our team provides tailored and licensed health insurance advice and support to individuals and families. </p> -->
+                                                        <!-- <p class="text-base font-medium text-gray-900">Our team provides tailored and licensed health insurance advice and support to individuals and families.</p> -->
                                                         <p class="mt-1 text-sm text-gray-500">Health Insurance Consultation</p>
                                                     </a>
                                                 <!-- </each> -->
@@ -551,7 +551,7 @@
                                             <!-- Render each sublink -->
                                             
                                                 <a href="service-Health-Insurance-Consultation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <!-- <p class="text-base font-medium text-gray-900">Our team provides tailored and licensed health insurance advice and support to individuals and families. </p> -->
+                                                    <!-- <p class="text-base font-medium text-gray-900">Our team provides tailored and licensed health insurance advice and support to individuals and families.</p> -->
                                                     <p class="mt-1 text-sm text-gray-500">Health Insurance Consultation</p>
                                                 </a>
                                             <!-- </each> -->
@@ -596,24 +596,29 @@
                       
                     </div>
                     <!-- Bottom CTAs -->
-                    <div class="p-1 bg-gray-50">
-                        <a
-                            href="#"
-                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-secondary bg-gray-50 hover:bg-gray-100"
+                    <div class="d-none p-1 bg-primary sm:bg-gray-50">
+                        
+                            <button
+                            @click="contactModalOpen = true"
+                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary  hover:bg-gray-100"
                             >
-                            Send Us a Text
-                            <!-- text -->
-                            <!-- are these 2 correct? -->
-                            </a
-                        >
-                        <a
-                            href="#"
-                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-secondary bg-gray-50 hover:bg-gray-100"
-                            >
-                            
-                            <!-- none -->
-                            </a
-                        >
+                                Send us a Text
+                            </button>
+                        
+                        
+                            <a
+                                target = "_blank" 
+                                href="tel:+1 972-489-0061"
+                                :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                >
+                                Give us a Call
+                            </a>
+                         
+                     
+                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -659,7 +664,7 @@
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Health Insurance Consultation</span>
                     <!-- <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Mowing</span> -->
                 </h2>
-                <p class="max-w-3xl text-xl text-center text-gray-500">Our team provides tailored and licensed health insurance advice and support to individuals and families. </p>
+                <p class="max-w-3xl text-xl text-center text-gray-500">Our team provides tailored and licensed health insurance advice and support to individuals and families.</p>
                 <!-- <p class="max-w-3xl text-xl text-center text-gray-500">A big part of lawn maintenance is ensuring your lawn is regularly mowed. We know life gets busy, and we are here to help keep your lawn looking fresh. Mowing is the greatest!</p> -->
             </div>
             <!-- CTAs -->
@@ -682,7 +687,7 @@
                     <button @click="contactModalOpen = true;" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary">Send Us a Text</button>
                 </div>
                 <div class="inline-flex w-full ml-3 sm:w-auto">
-                    <a href="#" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"></a>
+                    <a href="#" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary">j</a>
                 </div> -->
             </div>
         </div>
@@ -970,16 +975,16 @@
                                         </div>
                                         <blockquote class="mt-10">
                                             <div class="max-w-3xl mx-auto text-base font-medium leading-9 text-center sm:text-2xl">
-                                                <p>Best service ever!</p>
+                                                <p>Bennie and his team helped my husband and I identify a policy that worked for us. So worth it!</p>
                                             </div>
                                             <footer class="mt-8">
                                                 <div class="flex flex-col items-center justify-center md:flex-row">
-                                                    <div class="text-base font-medium text-gray-900">Nick O </div>
+                                                    <div class="text-base font-medium text-gray-900">Shannon K </div>
                                                     <svg class="hidden w-5 h-5 mx-1 text-primary md:block" fill="currentColor" viewBox="0 0 20 20">
                                                         <path d="M11 0h3L9 20H6l5-20z" />
                                                     </svg>
                                                     <div class="flex items-center">
-                                                        <div class="text-base font-medium text-gray-500">Health Insurance Consultation</div>
+                                                        <div class="text-base font-medium text-gray-500">Market Research</div>
                                                         <svg class="w-5 h-5 mx-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
                                                             <path d="M11 0h3L9 20H6l5-20z" />
                                                         </svg>
@@ -1054,16 +1059,16 @@
                                         </div>
                                         <blockquote class="mt-10">
                                             <div class="max-w-3xl mx-auto text-base font-medium leading-9 text-center sm:text-2xl">
-                                                <p>Bennie and his team helped my husband and I identify a policy that worked for us. So worth it!</p>
+                                                <p>Best service ever!</p>
                                             </div>
                                             <footer class="mt-8">
                                                 <div class="flex flex-col items-center justify-center md:flex-row">
-                                                    <div class="text-base font-medium text-gray-900">Shannon K </div>
+                                                    <div class="text-base font-medium text-gray-900">Nick O </div>
                                                     <svg class="hidden w-5 h-5 mx-1 text-primary md:block" fill="currentColor" viewBox="0 0 20 20">
                                                         <path d="M11 0h3L9 20H6l5-20z" />
                                                     </svg>
                                                     <div class="flex items-center">
-                                                        <div class="text-base font-medium text-gray-500">Market Research</div>
+                                                        <div class="text-base font-medium text-gray-500">Health Insurance Consultation</div>
                                                         <svg class="w-5 h-5 mx-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
                                                             <path d="M11 0h3L9 20H6l5-20z" />
                                                         </svg>
@@ -1200,9 +1205,119 @@
             class="absolute inset-0 w-1/2 h-full bg-gray-50 rounded-r-3xl"
         ></div>
     </div>
-<div class="relative items-center px-4 py-12 mx-auto lg:grid gap-x-6 max-w-7xl sm:py-16 sm:px-6 lg:px-8"> <!-- Heading --> <div class="z-10 row-start-1 space-y-4 lg:col-start-4"> <h2 class="text-3xl font-extrabold text-primary lg:text-4xl">Service Areas</h2> <p id="proudLocation" class="text-xl text-gray-500"> <!-- Proudly serving Austin, TX and surrounding areas <br /><br /> Georgetown, Round Rock, Bastrop, Marble Falls, Burnet --> Proudly Serving   Colorado,    Wyoming,    Iowa,    Alabama,    Virginia,    West Virginia,    Ohio,    Wisconsin,    Illinois,    Kentucky,    Georgia,    Montana,    Florida,    South Carolina,    Indiana,    MI,    Delaware,    Maryland,    South Dakota,    Nebraska,    Kansas,    Oklahoma,    Louisiana,    Arkansas,    Missouri,    Texas,    Nevada    &    Utah </p> </div> </div>
-</section>
 
+    <div class="relative items-center grid-cols-4 px-4 py-12 mx-auto lg:grid gap-x-6 max-w-7xl sm:py-16 sm:px-6 lg:px-8">
+        <!-- Heading -->
+        <div class="z-10 row-start-1 space-y-4 lg:col-start-4">
+            <h2 class="text-3xl font-extrabold text-primary lg:text-4xl">Service Areas</h2>
+            <p id="proudLocation" class="text-xl text-gray-500">
+                <!-- Proudly serving Austin, TX and surrounding areas <br /><br />
+                Georgetown, Round Rock, Bastrop, Marble Falls, Burnet -->
+                Proudly Serving   Kentucky,    Georgia,    Montana,    Florida,    South Carolina,    Indiana,    Michigan,    Delaware,    Maryland,    South Dakota,    Nebraska,    Kansas,    Oklahoma,    Louisiana,    Arkansas,    Missouri,    Texas,    Nevada,    Utah,    Tennessee,    Mississippi,    Colorado,    Wyoming,    Iowa,    Alabama,    Virginia,    West Virginia,    Ohio,    Wisconsin,    Illinois,    North Carolina & Surrounding Areas  
+            </p>
+        </div>
+        <!-- Map -->
+        <div class="relative col-span-3 row-start-1 mt-6 lg:mt-0 lg:col-start-1">
+            <!-- Decorative Dots -->
+            <div aria-hidden="true" x-cloak x-data="{ shown: false }" x-intersect.half="shown = true" class="hidden lg:block">
+                <svg
+                    x-show="shown"
+                    x-transition:enter="transition duration-1000"
+                    x-transition:enter-start="transform translate-x-full opacity-0"
+                    x-transition:enter-end="transform translate-x-0 opacity-100"
+                    x-transition:leave="transition duration-1000 opacity-100"
+                    x-transition:leave-start="transform opacity-0"
+                    x-transition:leave-end="transform translate-x-full"
+                    class="absolute top-0 -right-48"
+                    width="404"
+                    height="404"
+                    fill="none"
+                    viewBox="0 0 404 404"
+                >
+                    <defs>
+                        <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+                </svg>
+            </div>
+            <!-- Map Wrapper -->
+            <div class="relative h-[500px] w-full rounded-2xl shadow-xl overflow-hidden">
+                <!-- Your map here -->
+                <div class="w-full h-full bg-gray-400">
+                    <div style="height:500px; width:100%;" id="map"></div>
+                    <script >
+                        async function coordinate(url) {
+                            const res = await fetch(url)
+                            const coordinates = await res.json()
+                            return [coordinates.results[0].geometry.location.lat, coordinates.results[0].geometry.location.lng]
+                        }
+                        async function initMap() {
+                        // let totalText = document.getElementById("proudLocation")
+                        // let removeProudly = totalText.replaceAll('Proudly serving ','')
+                        
+                        // let cities = Array.from(document.getElementsByClassName("city")).map(i => {
+                        // return i.innerHTML.trim()
+                        // })
+                        // let state = Array.from(document.getElementsByClassName("state")).map(i => {
+                        // return i.innerHTML.trim()
+                        // })
+                        // let radius = Array.from(document.getElementsByClassName("radius")).map(i => {
+                        // return Number(i.innerHTML.trim())
+                        // })
+                        // let radius = 50
+                        let radius = document.querySelector('#radius').innerText
+                        let city = document.querySelector('#city').innerText
+                        let state = document.querySelector('#state').innerText
+                        console.log('radius - city ' , city)
+                        console.log('radius - radius ' , state)
+                        let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyDqq7K5Aj5_4wzi7NGzphVphTEJOZcE9dA`
+                        // let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${cities[0].replace(" ", "+")}+${state[0]}&key=AIzaSyDqq7K5Aj5_4wzi7NGzphVphTEJOZcE9dA`
+                
+                        let coordinates = await coordinate(url)  
+                
+                
+                        // Create the map.
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 8,
+                        center: { lat: coordinates[0], lng: coordinates[1]},
+                        mapTypeId: "terrain",
+                        });
+                
+                        // Construct the circle for each value in citymap.
+                        // Note: We scale the area of the circle based on the population.
+                
+                       // Add the circle for this city to the map.
+                        const cityCircle = new google.maps.Circle({
+                            strokeColor: "#FF0000",
+                            strokeOpacity: 0.8,
+                            strokeWeight: 2,
+                            fillColor: "#FF0000",
+                            fillOpacity: 0.35,
+                            map,
+                            animation: google.maps.Animation.DROP,
+                            center: { lat: coordinates[0], lng: coordinates[1] },
+                            radius: radius * 1638
+                        });
+                        
+                        }
+                
+                    </script>
+                    <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly"
+                    async
+                  ></script> 
+              
+                <span class="sr-only" id="city">Kentucky</span>
+                <span class="sr-only" id="state"></span>
+                <span class="sr-only" id="radius">200</span>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                         
                     
                         
@@ -1266,7 +1381,11 @@
                 <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/f276fcf4-7fb0-4924-a2a1-bb2200be5c09.jpeg" alt="" />
                 
                 <p class="text-base text-gray-500">
-                    IndianaQuality Health Insurance services across the USA. Health insurance is confusing. Let me make it make sense. Call me anytime.
+                    Highland Health Advisors<br/>
+                     
+                        Kentucky,  <br/>
+                    
+                    +1 972-489-0061
                     <!-- Is this supposed to be here and correct?  -->
                     <!-- The finest landscaping in Austin & surrounding areas. Exceptional, professional service. You are our priority! -->
                 </p>
@@ -1363,9 +1482,263 @@
                     </div>
                 </div>
                 <!-- Second two footer items -->
-                <div class="md:grid md:grid-cols-1 md:gap-8">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
                     <!-- Locations Links -->
-                     <!-- Hours Links -->
+                    <div>
+                        <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Service Areas</h3>
+                        <ul role="list" class="mt-4 -mx-1 space-y-4">
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Kentucky, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Georgia, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Montana, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Florida, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >South Carolina, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Indiana, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Michigan, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Delaware, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Maryland, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >South Dakota, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Nebraska, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Kansas, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Oklahoma, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Louisiana, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Arkansas, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Missouri, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Texas, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Nevada, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Utah, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Tennessee, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Mississippi, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Colorado, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Wyoming, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Iowa, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Alabama, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Virginia, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >West Virginia, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Ohio, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Wisconsin, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Illinois, </a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="#"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >North Carolina, </a
+                                >
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <!-- Hours Links -->
                     <div class="mt-12 md:mt-0">
                         <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">Hours</h3>
                         <ul role="list" class="mt-4 -mx-1 space-y-4">
@@ -1374,7 +1747,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Monday: 8:00am - 6:00am</a
+                                    >Sun: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1382,7 +1755,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Tuesday: 8:00am - 6:00pm</a
+                                    >Mon: 8:00am - 6:00am</a
                                 >
                             </li>
                             
@@ -1390,7 +1763,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Wednesday: 8:00am - 6:00pm</a
+                                    >Tues: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1398,7 +1771,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Thursday: 8:00am - 6:00pm</a
+                                    >Wed: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1406,7 +1779,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Friday: 8:00am - 6:00pm</a
+                                    >Thu: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1414,7 +1787,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Saturday: 8:00am - 6:00pm</a
+                                    >Fri: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1422,7 +1795,7 @@
                                 <a
                                     href="#"
                                     class="p-1 text-base text-gray-500 rounded  hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-offset-2 ring-opacity-75"
-                                    >Sunday: 0:00am - 0:00am</a
+                                    >Sat: 8:00am - 6:00pm</a
                                 >
                             </li>
                             
@@ -1613,22 +1986,22 @@
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112900"
-                                            name="112900"
+                                            id="contact-service-121358"
+                                            name="121358"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112900" class="ml-3 text-sm font-medium text-gray-700">Health Insurance Consultation</label>
+                                        <label for="contact-label-service-121358" class="ml-3 text-sm font-medium text-gray-700">Health Insurance Consultation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-112901"
-                                            name="112901"
+                                            id="contact-service-121359"
+                                            name="121359"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-112901" class="ml-3 text-sm font-medium text-gray-700">Market Research</label>
+                                        <label for="contact-label-service-121359" class="ml-3 text-sm font-medium text-gray-700">Market Research</label>
                                     </div>
                                 
                             </div>
